@@ -1,4 +1,4 @@
-use std::{io, process::Command};
+use std::{io, path::Path, process::Command};
 
 use winreg::{enums::HKEY_LOCAL_MACHINE, RegKey};
 
@@ -78,10 +78,43 @@ fn information(sub_key: RegKey, game: Game) -> Option<()> {
     if let Ok(display_name) = sub_key.get_value::<String, _>("DisplayName") {
         match game {
             Game::Genshin => {
-                if display_name.eq("原神") {
-                    println!("{}", display_name);
+                if display_name.eq("米哈游启动器") {
                     match sub_key.get_value::<String, _>("InstallPath") {
                         Ok(install_path) => {
+                            let path =
+                                format!("{}/games/Genshin Impact Game/YuanShen.exe", install_path);
+                            let path = Path::new(&path);
+                            if !path.exists() {
+                                return None;
+                            }
+                            println!("InstallPath: {}", install_path);
+                            Command::new(format!(
+                                "{}/games/Genshin Impact Game/YuanShen.exe",
+                                install_path
+                            ))
+                            .spawn()
+                            .expect("Failed to execute command");
+                        }
+                        Err(_) => println!("InstallPath: None"),
+                    };
+                    match sub_key.get_value::<String, _>("InstallLocation") {
+                        Ok(install_location) => println!("InstallLocation : {}", install_location),
+                        Err(_) => println!("InstallLocation : None"),
+                    };
+                    match sub_key.get_value::<String, _>("UninstallString") {
+                        Ok(uninstall_string) => println!("UninstallString : {}", uninstall_string),
+                        Err(_) => println!("UninstallString : None"),
+                    };
+                    return Some(());
+                }
+                if display_name.eq("原神") {
+                    match sub_key.get_value::<String, _>("InstallPath") {
+                        Ok(install_path) => {
+                            let path = format!("{}/Genshin Impact Game/YuanShen.exe", install_path);
+                            let path = Path::new(&path);
+                            if !path.exists() {
+                                return None;
+                            }
                             println!("InstallPath: {}", install_path);
                             Command::new(format!(
                                 "{}/Genshin Impact Game/YuanShen.exe",
@@ -105,9 +138,16 @@ fn information(sub_key: RegKey, game: Game) -> Option<()> {
             }
             Game::WutheringWaves => {
                 if display_name.eq("鸣潮") {
-                    println!("{}", display_name);
                     match sub_key.get_value::<String, _>("InstallPath") {
                         Ok(install_path) => {
+                            let path = format!(
+                                "{}/Wuthering Waves Game/Wuthering Waves.exe",
+                                install_path
+                            );
+                            let path = Path::new(&path);
+                            if !path.exists() {
+                                return None;
+                            }
                             println!("InstallPath: {}", install_path);
                             Command::new(format!(
                                 "{}/Wuthering Waves Game/Wuthering Waves.exe",

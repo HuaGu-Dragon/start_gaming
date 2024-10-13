@@ -8,14 +8,14 @@ Just for fun
 
 # Documentation
 
-https://docs.rs/game_start_macro/0.1.0/game_start_macro/
+https://docs.rs/start_gaming
 
 # Inspiration
 
 from:
 
 > https://github.com/Charley-xiao/nogenshin
-> and **Rewirite It In Rust**
+> and **Rewrite It In Rust**
 
 ## How to use
 
@@ -23,7 +23,7 @@ add this:
 
 ```Rust
 [dependencies]
-start_gaming = "0.1.1"
+start_gaming = "0.1.2"
 game_start_macro = "0.1.0"
 ```
 
