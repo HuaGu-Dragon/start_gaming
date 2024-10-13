@@ -3,17 +3,22 @@
 Just for fun
 
 # Warming
-***This function is only available on Windows.***
+
+**_This function is only available on Windows._**
 
 # Documentation
+
 https://docs.rs/game_start_macro/0.1.0/game_start_macro/
 
 # Inspiration
+
 from:
+
 > https://github.com/Charley-xiao/nogenshin
-and **Rewirite It In Rust**
+> and **Rewirite It In Rust**
 
 ## How to use
+
 add this:
 
 ```Rust
@@ -30,7 +35,7 @@ To download the dependencies for your Rust project, run the following command in
 cargo build
 ```
 
-This command will read the *Cargo.toml* file and download and compile all the listed dependencies.
+This command will read the _Cargo.toml_ file and download and compile all the listed dependencies.
 
 # Example Code
 
@@ -55,10 +60,14 @@ If the method triggers panic, then he will open Genshin Impact or Wuthering Wave
 Just aim to relax you.
 
 # Errors
+
       This function will return an error if the game is not found in the registry.
-      This function will return an error if the game executable is not found.
+
 # Panics
+
       This function will return an PANIC if the game executable is not found.
+
 # Safety
+
       This function is not marked as unsafe, but it is not safe to use in a concurrent environment.
       It is just for fun.

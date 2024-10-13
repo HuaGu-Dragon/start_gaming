@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["HuaGu_Dragon"]
 description = "A macro for starting a game"
 license = "MIT"
-ocumentation = "https://docs.rs/game_start_macro"
+documentation = "https://docs.rs/game_start_macro"
 homepage = "https://github.com/HuaGu-Dragon/start_gaming"
 repository = "https://github.com/HuaGu-Dragon/start_gaming"
 

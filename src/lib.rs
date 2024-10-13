@@ -26,11 +26,10 @@ pub enum Game {
 /// # Errors
 ///
 /// This function will return an error if the game is not found in the registry.
-/// This function will return an error if the game executable is not found.
 ///
 /// # Panics
 ///
-/// So far it has not been discovered
+/// This function will return an error if the game executable is not found.
 ///
 /// # Safety
 ///
@@ -79,7 +78,7 @@ fn information(sub_key: RegKey, game: Game) -> Option<()> {
     if let Ok(display_name) = sub_key.get_value::<String, _>("DisplayName") {
         match game {
             Game::Genshin => {
-                if display_name.contains("原神") {
+                if display_name.eq("原神") {
                     println!("{}", display_name);
                     match sub_key.get_value::<String, _>("InstallPath") {
                         Ok(install_path) => {
@@ -105,7 +104,7 @@ fn information(sub_key: RegKey, game: Game) -> Option<()> {
                 }
             }
             Game::WutheringWaves => {
-                if display_name.contains("鸣潮") {
+                if display_name.eq("鸣潮") {
                     println!("{}", display_name);
                     match sub_key.get_value::<String, _>("InstallPath") {
                         Ok(install_path) => {

@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["HuaGu_Dragon"]
 description = "Just for fun"
 license = "MIT"
-ocumentation = "https://docs.rs/start_gaming"
+documentation = "https://docs.rs/start_gaming"
 homepage = "https://github.com/HuaGu-Dragon/start_gaming"
 repository = "https://github.com/HuaGu-Dragon/start_gaming"
 
