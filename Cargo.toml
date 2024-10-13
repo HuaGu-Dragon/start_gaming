@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 authors = ["HuaGu_Dragon"]
 description = "Just for fun"
+license = "MIT"
 
 [lib]
 doctest = true

@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 authors = ["HuaGu_Dragon"]
 description = "A macro for starting a game"
+license = "MIT"
 
 [lib]
 proc-macro = true
