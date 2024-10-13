@@ -5,10 +5,13 @@ edition = "2021"
 authors = ["HuaGu_Dragon"]
 description = "Just for fun"
 license = "MIT"
+ocumentation = "https://docs.rs/start_gaming"
+homepage = "https://github.com/HuaGu-Dragon/start_gaming"
+repository = "https://github.com/HuaGu-Dragon/start_gaming"
 
 [lib]
 doctest = true
 
 [dependencies]
-game_start_macro = { path = "./game_start_macro", version = "0.1.0" }
+game_start_macro = "0.1.0"
 winreg = "0.7"

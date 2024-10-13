@@ -1,0 +1,1 @@
+E:\Code\Rust\start_gaming\game_start_macro\target\package\game_start_macro-0.1.0\target\debug\game_start_macro.dll: E:\Code\Rust\start_gaming\game_start_macro\target\package\game_start_macro-0.1.0\src\lib.rs
