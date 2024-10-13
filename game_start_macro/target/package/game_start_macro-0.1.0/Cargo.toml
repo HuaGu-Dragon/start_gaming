@@ -20,8 +20,10 @@ autoexamples = false
 autotests = false
 autobenches = false
 description = "A macro for starting a game"
+homepage = "https://github.com/HuaGu-Dragon/start_gaming"
 readme = false
 license = "MIT"
+repository = "https://github.com/HuaGu-Dragon/start_gaming"
 
 [lib]
 name = "game_start_macro"

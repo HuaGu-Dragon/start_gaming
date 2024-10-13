@@ -5,6 +5,8 @@ version = 3
 [[package]]
 name = "game_start_macro"
 version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "17aefdd86c8ebf1ac5641f4494de651dd010397d0b927601236992ba65f2507c"
 dependencies = [
  "quote",
  "syn",
