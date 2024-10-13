@@ -1,0 +1,13 @@
+[package]
+name = "start_gaming"
+version = "0.1.0"
+edition = "2021"
+authors = ["HuaGu_Dragon"]
+description = "Just for fun"
+
+[lib]
+doctest = true
+
+[dependencies]
+game_start_macro = { path = "./game_start_macro", version = "0.1.0" }
+winreg = "0.7"
