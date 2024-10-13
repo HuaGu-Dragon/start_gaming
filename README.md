@@ -23,7 +23,7 @@ add this:
 
 ```Rust
 [dependencies]
-start_gaming = "0.1.0"
+start_gaming = "0.1.1"
 game_start_macro = "0.1.0"
 ```
 
