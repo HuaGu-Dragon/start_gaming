@@ -1,12 +1,17 @@
-# start_gaming
+# Start_gaming
 
 Just for fun
 
 # Warming
 ***This function is only available on Windows.***
 
-# documentation
+# Documentation
 https://docs.rs/game_start_macro/0.1.0/game_start_macro/
+
+# Inspiration
+from:
+> https://github.com/Charley-xiao/nogenshin
+and **Rewirite It In Rust**
 
 ## How to use
 add this:
